@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazenda Sustentável Agrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <h1>Fazenda Sustentável Agrinho</h1>
+            <p>Produção orgânica, bem-estar animal e natureza em harmonia.</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#sectores">Setores</a></li>
+                <li><a href="#valores">Valores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo à fazenda do futuro</h1>
+            <p>Conheça práticas sustentáveis que preservam o solo, a água e a vida animal.</p>
+            <a class="btn-primary" href="#sectores">Ver Nossos Projetos</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="sobre" class="intro">
+            <h2>Nossa missão</h2>
+            <p>A Fazenda Agrinho combina tecnologia, respeito à natureza e tradição rural para criar um sistema produtivo sustentável. Estamos focados em hortas orgânicas, pecuária ética, criação de cavalos e jardins que favorecem a polinização.</p>
+        </section>
+
+        <section id="sectores" class="container">
+            <article class="card">
+                <h2>Nossas Hortas</h2>
+                <p>Cultivos orgânicos em larga escala que usam recursos naturais com eficiência.</p>
+                <button class="btn-info" onclick="mostrarDetalhes('horta')">Ver Tecnologias</button>
+            </article>
+
+            <article class="card">
+                <h2>Animais Saudáveis</h2>
+                <p>Bem-estar e pastagem rotacionada garantem saúde e produtividade.</p>
+                <button class="btn-info" onclick="mostrarDetalhes('animais')">Ver Manejo</button>
+            </article>
+
+            <article class="card">
+                <h2>Cavalos</h2>
+                <p>Força e tradição no campo com cuidado genético e respeito animal.</p>
+                <button class="btn-info" onclick="mostrarDetalhes('cavalos')">Ver Linhagens</button>
+            </article>
+
+            <article class="card">
+                <h2>Flores</h2>
+                <p>Beleza e equilíbrio ambiental com jardins que atraem abelhas nativas.</p>
+                <button class="btn-info" onclick="mostrarDetalhes('flores')">Ver Espécies</button>
+            </article>
+        </section>
+
+        <section id="valores" class="info-grid">
+            <div class="info-box">
+                <h3>Produção orgânica</h3>
+                <p>Utilizamos técnicas de gotejamento solar e sensores de umidade para reduzir o consumo de água em 40% e produzir alimentos 100% orgânicos.</p>
+            </div>
+            <div class="info-box">
+                <h3>Pecuária ética</h3>
+                <p>Os animais vivem em liberdade e recebem monitoramento digital contínuo para garantir saúde integral e pasto natural.</p>
+            </div>
+            <div class="info-box">
+                <h3>Cavalos de lida</h3>
+                <p>Trabalhamos com linhagens Crioulo e Quarto de Milha, valorizando a tradição e o uso sustentável no campo.</p>
+            </div>
+            <div class="info-box">
+                <h3>Jardins de polinização</h3>
+                <p>Plantamos mais de 50 espécies nativas para manter 12 colmeias ativas e aumentar a produtividade das hortas.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="modalInfo" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2 id="modalTitle">Título</h2>
+            <p id="modalText">Texto informativo aqui...</p>
+            <div id="modalStats" class="stats"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Fazenda Sustentável Agrinho © 2026 | Juntos pela terra, água e vida.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

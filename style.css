@@ -1,0 +1,250 @@
+/* Configurações Gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f9f2;
+    color: #2d3e33;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+header {
+    background-color: #2d5a27;
+    color: white;
+    padding: 1rem 5%;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.brand p {
+    margin: 0.25rem 0 0;
+    opacity: 0.9;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero {
+    background: linear-gradient(rgba(45, 90, 39, 0.75), rgba(45, 90, 39, 0.75)),
+        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.75rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary,
+.btn-info {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.25s ease, transform 0.25s ease;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: #f0c34a;
+    color: #2d5a27;
+    padding: 14px 28px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #d9aa3f;
+    transform: translateY(-2px);
+}
+
+.btn-info {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 22px;
+}
+
+.btn-info:hover {
+    background-color: #2d5a27;
+}
+
+main {
+    padding: 40px 5%;
+}
+
+.intro,
+.info-grid {
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    margin-top: 0;
+    color: #2d5a27;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    padding: 26px;
+    border-radius: 20px;
+    border-left: 6px solid #4caf50;
+    box-shadow: 0 14px 35px rgba(45, 90, 39, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(45, 90, 39, 0.14);
+}
+
+.card h2 {
+    color: #4b3621;
+    margin-top: 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.info-box {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 18px;
+    border: 1px solid rgba(45, 90, 39, 0.12);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.info-box h3 {
+    margin-top: 0;
+    color: #2d5a27;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 30px 20px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    max-width: 560px;
+    padding: 32px;
+    border-radius: 18px;
+    position: relative;
+    text-align: center;
+    animation: abrirModal 0.35s ease;
+}
+
+@keyframes abrirModal {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #4b3621;
+}
+
+.stats {
+    margin-top: 18px;
+    font-weight: 700;
+    color: #2d5a27;
+}
+
+footer {
+    text-align: center;
+    padding: 22px 20px;
+    background: #4b3621;
+    color: white;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    header,
+    main,
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    nav {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+}
